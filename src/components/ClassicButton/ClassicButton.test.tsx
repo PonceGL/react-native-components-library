@@ -1,5 +1,6 @@
 import React from 'react';
 import {render, RenderAPI} from '@testing-library/react-native';
+
 import {ClassicButton} from '.';
 
 describe('ClassicButton test', () => {

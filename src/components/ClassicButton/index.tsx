@@ -1,17 +1,15 @@
 import React from 'react';
-
-// Components
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export const ClassicButton = (): JSX.Element => {
-  return (
-    <View style={styles.content}>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>classic button</Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
+// Components
+
+export const ClassicButton = (): JSX.Element => (
+  <View style={styles.content}>
+    <TouchableOpacity style={styles.button}>
+      <Text style={styles.buttonText}>classic button</Text>
+    </TouchableOpacity>
+  </View>
+);
 
 const styles = StyleSheet.create({
   content: {
