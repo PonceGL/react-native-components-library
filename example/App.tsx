@@ -6,11 +6,10 @@
  */
 
 import React from 'react';
-// import type {PropsWithChildren} from 'react';
-import {ClassicButton, ButtonOutline} from '@poncegl/library';
-
 // Components
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+// import type {PropsWithChildren} from 'react';
+import {ButtonOutline, ClassicButton} from '@poncegl/library';
 
 export default function App(): JSX.Element {
   return (
