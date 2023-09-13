@@ -1,25 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 // Components
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-// import type {PropsWithChildren} from 'react';
-import {ButtonOutline, ClassicButton} from '@poncegl/library';
+import {StyleSheet, Text, View} from 'react-native';
+import {ButtonOutline, ClassicButton, Content} from '@poncegl/library';
 
 export default function App(): JSX.Element {
   return (
-    <SafeAreaView style={styles.content}>
+    <Content screenName="Home">
       <View style={styles.content}>
         <Text>App</Text>
+        <ClassicButton />
+        <ButtonOutline />
       </View>
-      <ClassicButton />
-      <ButtonOutline />
-    </SafeAreaView>
+    </Content>
   );
 }
 
