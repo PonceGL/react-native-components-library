@@ -68,6 +68,9 @@
   "engines": {
     "node": ">=16"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",
