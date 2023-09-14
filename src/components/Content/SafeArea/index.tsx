@@ -7,6 +7,11 @@ import {ContainerProps} from '../../../interfaces/Container';
 
 import {SafeAreaStyles} from './SafeAreaStyles';
 
+/**
+ * The SafeArea function is a TypeScript React component that renders a safe area view with a linear
+ * gradient background and customizable colors.
+ * @param {ContainerProps}  - - `children`: The content to be rendered within the SafeArea component.
+ */
 export function SafeArea({
   children,
   screenName,

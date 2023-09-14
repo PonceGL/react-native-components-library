@@ -5,6 +5,14 @@ import {ContainerProps} from '../../interfaces/Container';
 import {FullScreen} from './FullScreen';
 import {SafeArea} from './SafeArea';
 
+/**
+ * The `Content` function is a React component that renders either a `FullScreen` or `SafeArea`
+ * component based on the `fullScreen` prop.
+ * @param {ContainerProps}  - - `children`: The content to be rendered inside the `Content` component.
+ * @returns a JSX element. If the `fullScreen` prop is `true`, it returns a `FullScreen` component with
+ * the specified props. Otherwise, it returns a `SafeArea` component with the specified props and the
+ * `children` passed as its content.
+ */
 export function Content({
   children,
   screenName,

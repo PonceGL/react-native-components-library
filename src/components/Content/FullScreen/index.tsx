@@ -6,6 +6,12 @@ import {ContainerProps} from '../../../interfaces/Container';
 
 import {FullScreenStyles} from './FullScreenStyles';
 
+/**
+ * The FullScreen function is a TypeScript React component that renders a full-screen container with a
+ * customizable background color and status bar.
+ * @param {ContainerProps}  - - `children`: The content to be rendered inside the FullScreen component.
+ * @returns The FullScreen component is returning a JSX.Element.
+ */
 export function FullScreen({
   children,
   screenName,
