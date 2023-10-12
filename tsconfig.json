@@ -1,14 +1,30 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "@poncegl/library": ["./src/index"]
     },
-    "forceConsistentCasingInFileNames": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "allowJs": true,
+    "jsx": "react-native",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
-    "noImplicitReturns": true,
-    "noEmit": false
-  }
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "tsconfig.json"
+  ]
 }

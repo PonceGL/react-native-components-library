@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  extends: '@react-native',
   globals: {
     JSX: true,
     jest: true,
@@ -9,7 +10,6 @@ module.exports = {
     es2021: true,
     'react-native/react-native': true,
   },
-  extends: '@react-native',
   plugins: ['react', 'react-native', 'simple-import-sort'],
   parserOptions: {
     ecmaFeatures: {
