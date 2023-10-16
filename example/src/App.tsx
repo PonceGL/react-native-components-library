@@ -1,59 +1,91 @@
 import React from 'react';
-// import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  StatusBar,
+  Platform,
+  ScrollView,
   StyleSheet,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {SumNums} from '@poncegl/library';
+import {
+  Colors,
+  DebugInstructions,
+  LearnMoreLinks,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+import {Content} from '@poncegl/library';
+
+import {Section} from './components/Section';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    flex: 1,
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : '#f9a8d4',
   };
 
-  console.log('====================================');
-  console.log('SumNums');
-  console.log(SumNums());
-  console.log('====================================');
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <View style={styles.sectionContainer}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            {
-              color: isDarkMode ? Colors.white : Colors.black,
-            },
-          ]}>
-          @poncegl/library
-        </Text>
+    <Content
+      screenName="App"
+      fullScreen={Platform.OS === 'android'}
+      topColor="#f9a8d4"
+      backgroundColor={isDarkMode ? Colors.black : Colors.white}
+      bottomColor={isDarkMode ? Colors.black : Colors.white}>
+      <View style={styles.container}>
+        <ScrollView
+          contentInsetAdjustmentBehavior="never"
+          bounces={false}
+          style={backgroundStyle}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}>
+          <Text
+            style={[
+              styles.sectionTitle,
+              {
+                color: isDarkMode ? Colors.white : Colors.black,
+              },
+            ]}>
+            @poncegl/library
+          </Text>
+          <View
+            style={{
+              backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            }}>
+            <Section title="Step One">
+              <Text>
+                Edit <Text style={styles.highlight}>App.tsx</Text> to change
+                this screen and then come back to see your edits.
+              </Text>
+            </Section>
+            <Section title="See Your Changes">
+              <ReloadInstructions />
+            </Section>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+            <Section title="Learn More">
+              <Text>Read the docs to discover what to do next:</Text>
+            </Section>
+            <LearnMoreLinks />
+          </View>
+        </ScrollView>
       </View>
-    </SafeAreaView>
+    </Content>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
   },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
     textAlign: 'center',
+    marginVertical: 30,
+  },
+  highlight: {
+    fontWeight: '700',
   },
 });
 

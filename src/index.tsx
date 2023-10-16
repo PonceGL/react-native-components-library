@@ -1,3 +1,2 @@
-export function SumNums() {
-  return 1 + 1;
-}
+export * from './components';
+export * from './types';
