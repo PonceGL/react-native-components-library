@@ -19,7 +19,7 @@ export function FullScreen({
           backgroundColor: backgroundColor || DEFAULT_VALUES.backgroundColor,
         },
       ]}
-      accessibilityLabel={screenName}>
+      testID={`FullScreen-${screenName ?? DEFAULT_VALUES.screenName}`}>
       {Children.only(children)}
     </View>
   );

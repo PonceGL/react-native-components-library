@@ -12,7 +12,9 @@ export function SafeArea({
   backgroundColor,
 }: ContainerProps): JSX.Element {
   return (
-    <SafeAreaView style={styles.content} accessibilityLabel={screenName}>
+    <SafeAreaView
+      style={styles.content}
+      testID={`SafeArea-${screenName ?? DEFAULT_VALUES.screenName}`}>
       <View
         style={[
           styles.content,
