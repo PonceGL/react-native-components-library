@@ -2,7 +2,10 @@ import React, {Children} from 'react';
 import {View} from 'react-native';
 
 import {ContainerProps} from '../../../types/content';
-import {DEFAULT_VALUES} from '../../organisms/content/defaultValues';
+import {
+  DEFAULT_VALUES,
+  testIDFullScreen,
+} from '../../organisms/content/defaultValues';
 
 import {styles} from './styles';
 
@@ -19,7 +22,7 @@ export function FullScreen({
           backgroundColor: backgroundColor || DEFAULT_VALUES.backgroundColor,
         },
       ]}
-      testID={`FullScreen-${screenName ?? DEFAULT_VALUES.screenName}`}>
+      testID={`${testIDFullScreen}-${screenName ?? DEFAULT_VALUES.screenName}`}>
       {Children.only(children)}
     </View>
   );

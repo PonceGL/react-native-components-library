@@ -2,7 +2,10 @@ import React, {Children} from 'react';
 import {SafeAreaView, View} from 'react-native';
 
 import {ContainerProps} from '../../../types/content';
-import {DEFAULT_VALUES} from '../../organisms/content/defaultValues';
+import {
+  DEFAULT_VALUES,
+  testIDSafeAreaScreen,
+} from '../../organisms/content/defaultValues';
 
 import {styles} from './styles';
 
@@ -14,8 +17,13 @@ export function SafeArea({
   return (
     <SafeAreaView
       style={styles.content}
-      testID={`SafeArea-${screenName ?? DEFAULT_VALUES.screenName}`}>
+      testID={`${testIDSafeAreaScreen}-${
+        screenName ?? DEFAULT_VALUES.screenName
+      }`}>
       <View
+        testID={`${testIDSafeAreaScreen}-${
+          screenName ?? DEFAULT_VALUES.screenName
+        }-View`}
         style={[
           styles.content,
           {

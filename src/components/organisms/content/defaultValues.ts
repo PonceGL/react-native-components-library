@@ -8,3 +8,6 @@ export const DEFAULT_VALUES: ContainerProps = {
   backgroundColor: '#ffffff',
   fullScreen: false,
 };
+
+export const testIDFullScreen = 'FullScreen';
+export const testIDSafeAreaScreen = 'SafeArea';
